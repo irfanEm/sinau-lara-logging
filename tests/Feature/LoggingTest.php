@@ -45,4 +45,17 @@ class LoggingTest extends TestCase
 
         self::assertTrue(true);
     }
+
+    public function testFileHandler()
+    {
+        $hasilLog = Log::channel("file");
+        $hasilLog->error("Hai Error, kamu g boleh dateng !");
+        $hasilLog->info("Hello Info");
+        $hasilLog->warning("Hello Warning");
+        $hasilLog->critical("Hello Critical");
+
+        Log::info("Log info ini akan melewati jalur default");
+
+        self::assertTrue(true);
+    }
 }
