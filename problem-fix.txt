@@ -1,0 +1,2 @@
+Curl error (code 60): SSL certificate problem: certificate has expired (logging test slack) :
+https://laracasts.com/discuss/channels/laravel/curl-error-60-ssl-certificate-problem-certificate-has-expired-in-slackwebhookhandler
