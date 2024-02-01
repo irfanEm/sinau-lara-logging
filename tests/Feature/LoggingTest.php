@@ -18,4 +18,31 @@ class LoggingTest extends TestCase
 
         self::assertTrue(true);
     }
+
+    public function testContext()
+    {
+        Log::info("Hai Info", ["user" => "irfan_em"]);
+
+        self::assertTrue(true);
+    }
+
+    public function testWithContext()
+    {
+        Log::withContext(["user" => "balqis_fa"]);
+
+        Log::info("Hai Info");
+        Log::error("Hai Error !");
+
+        self::assertTrue(true);
+    }
+
+    public function testWithChannel()
+    {
+        $hasilLog = Log::channel("slack");
+        $hasilLog->error("Hai Error, kamu g boleh dateng !");
+
+        Log::info("Log info ini akan melewati jalur default");
+
+        self::assertTrue(true);
+    }
 }
